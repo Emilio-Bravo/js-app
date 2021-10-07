@@ -1,0 +1,32 @@
+:root {
+  --glass: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/bg2.jpg);
+}
+
+.container {
+  min-height: 100vh;
+}
+
+#inner-container {
+  background-color: var(--glass);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+#inner-container span {
+  color: #000;
+  font-weight: 400;
+}
+
+#main-form {
+  background-color: var(--glass);
+  backdrop-filter: blur(15px);
+  border: 1px solid #fff;
+}

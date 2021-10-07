@@ -30,3 +30,7 @@ body {
   backdrop-filter: blur(15px);
   border: 1px solid #fff;
 }
+
+.task-container {
+    overflow-wrap: break-word;
+}

@@ -36,9 +36,9 @@ const list = () => {
   for (let item in localStorage) {
     if (!isNaN(item)) {
       let template = `
-      <div class="border-top border-white p-3 rounded" id="${item}">
+      <div class="border-top border-white p-3 rounded task-container" id="${item}">
         <span class="lead">
-          ${localStorage.getItem(item).replace(/^\([0-9]\)/, "")}
+          ${localStorage.getItem(item).replace(/^\([0-9]+\)/, "")}
         </span>
         <button class="btn btn-success float-end"><i class="fas fa-check"></i></button>
       </div>`;
@@ -76,7 +76,10 @@ const removeTask = (id) => {
 };
 
 const initApp = () => {
-  get("#r-btn").addEventListener("click", useMic);
+  get("#r-btn").addEventListener("click", () => {
+    INPUT.value = "";
+    useMic();
+  });
 
   CBTN.addEventListener("click", addTask);
 
